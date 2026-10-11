@@ -1,6 +1,6 @@
 ---
 name: necro
-description: Project archaeology and technical debt management. Activates automatically when entering a project directory, when user mentions cleanup, deprecated files, zombies, architecture, or project structure. Also triggers on "clean up code", "remove unused files", "learn this project", "explain my project". Manages deprecated/ folders, ARCHITECTURE.md files, and zombie file detection. Auto-scans projects proactively.
+description: Project archaeology and technical debt management. Activates automatically when entering a project directory, when user mentions cleanup, deprecated files, zombies, architecture, or project structure. Also triggers on "clean up code", "remove unused files", "learn this project", "learn this project and conditions", "explain my project". Manages deprecated/ folders, ARCHITECTURE.md files, and zombie file detection. Auto-scans projects proactively.
 ---
 
 # Necro - Project Archaeology for AI-Assisted Development
@@ -12,7 +12,9 @@ Necro prevents AI coding tools from referencing zombie code (deprecated, unused,
 Activate Necro behaviors when:
 - Entering any project directory (auto-scan for `.necro/`)
 - User says: "clean up", "cleanup", "deprecated", "zombie", "unused files"
-- User says: "learn this project", "explain my project", "project structure"
+- User says: "learn this project", "learn this project and conditions", "explain my project", "project structure"
+  → also run the **system-contracts** skill after Necro finishes (see its "Learn this project"
+    section) and end on its Contracts TLDR. Necro runs first so discovery skips dead code.
 - User says: "remove unused", "archive old", "technical debt"
 - Working with files that match suspicious patterns
 - Before major refactoring work
